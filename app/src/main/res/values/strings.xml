@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SpaceInfo</string>
+
+    <string name="shared_preference">7b2617e8f2aec38b2f5f4de7c4d24078f3aa2f141ab0db4436b6173700ecbebd</string>
+    <string name="is_first_time">"is_first_time"</string>
+
+    <string name="next_btn">next</string>
+    <string name="next_btn_start">start</string>
+    <string name="back_btn">back</string>
+    <string name="success">Success</string>
+    <string name="failed">Failed</string>
+    <string name="start_exploring">start exploring</string>
+    <string name="space_explore">Space Explore</string>
+    <string name="exit">Press again to exit</string>
+
+
+    <string name="title_1">Space</string>
+    <string name="title_2">Technologies</string>
+    <string name="title_3">Heroes</string>
+
+    <string name="descr_1">Read interesting notes about the mysteries of deep space</string>
+    <string name="descr_2">Explore the different technologies that help scientists study space and stars</string>
+    <string name="descr_3">Stories about scientists, astronauts and others who study space</string>
+
+
+</resources>

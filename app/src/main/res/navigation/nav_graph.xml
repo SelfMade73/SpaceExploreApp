@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startupFragment">
+
+    <fragment
+        android:id="@+id/startupFragment"
+        android:name="com.example.spaceinfo.fragments.StartupFragment"
+        android:label="fragment_startup"
+        tools:layout="@layout/fragment_startup" >
+        <action
+            android:id="@+id/action_startupFragment_to_introFragment"
+            app:destination="@id/introFragment"
+            app:popUpTo="@+id/startupFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_startupFragment_to_themeFragment"
+            app:destination="@id/themeFragment"
+            app:popUpTo="@+id/startupFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.example.spaceinfo.fragments.IntroFragment"
+        android:label="fragment_intro"
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/action_introFragment_to_themeFragment"
+            app:destination="@id/themeFragment"
+            app:popUpTo="@+id/introFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nasaInfoFragment"
+        android:name="com.example.spaceinfo.fragments.NasaInfoFragment"
+        android:label="nasa_info_fragment"
+        tools:layout="@layout/nasa_info_fragment">
+        <argument
+            android:name="item"
+            app:argType="com.example.spaceinfo.models.ThemeItem" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/themeFragment"
+        android:name="com.example.spaceinfo.fragments.ThemeFragment"
+        android:label="theme_fragment"
+        tools:layout="@layout/theme_fragment" >
+        <action
+            android:id="@+id/action_themeFragment_to_nasaInfoFragment"
+            app:destination="@id/nasaInfoFragment" >
+            <argument
+                android:name="item"
+                app:argType="com.example.spaceinfo.models.ThemeItem" />
+        </action>
+    </fragment>
+</navigation>
